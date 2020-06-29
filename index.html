@@ -8,58 +8,69 @@
 </head>
 <body>
     <div class="container">
-        <div class="row">
-            <div class="col-4">
-                <div class="row">
-                    <div class="col-12 text-uppercase">
-                        Pedros's weekley goal
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-4">
-
-                    </div>
-                    <div class="col-8">
-                        <div class="row">
-                            <div class="col-12">
-                                12 more mins. to achieve this week's Goal.
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-6">
-                                4
-                                Current Steak
-                            </div>
-                            <div class="col-6">
-                                12 
-                                Best Steak
-                            </div>
+        <div class="row justify-content-center">
+            <div class="col-5 py-5">
+                <div class="card-wrapper">
+                    <div class="row">
+                        <div class="col-12 text-uppercase widget-header">
+                            Pedros's weekley goal
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-8 text-uppercase">
-                        leaderboard
+                    <div class="row">
+                        <div class="col-5">
+                            <div class="progress-container">
+                                <div class="progress-bar-wrapper">
+                                    <object id="progress-bar" type="image/svg+xml" data="./assets/img/asset-4.svg"></object>
+                                </div>
+                                <div class="progress-content">
+                                    <div class="progress-title">Current</div>
+                                    <div class="current-goal-value"></div>
+                                    <div class="goal-target">
+                                        50m Goal
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-7">
+                            <div class="row my-3">
+                                <div class="col-12">
+                                    <span class="missing-achievement"></span> more mins. to achieve this week's Goal.
+                                </div>
+                            </div>
+                            <div class="row ">
+                                <div class="col-6">
+                                    <div class="alert alert-secondary px-1 d-flex flex-column text-center">
+                                        <span class="current-streak"></span>
+                                        Current Steak
+                                      </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="alert alert-secondary px-1 d-flex flex-column text-center">
+                                        <span class="best-streak"></span>
+                                        Best Steak
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-4">
-                        <div class="form-group">
-                            <select class="form-control" id="periodSelect">
-                              <option value="week">Week</option>
-                              <option value="month">Month</option>
-                            </select>
-                          </div>
+                    <div class="row align-items-baseline mt-4 mb-3">
+                        <div class="col-8 text-uppercase leaderboard-header">
+                            leaderboard
+                        </div>
+                        <div class="col-4">
+                            <div class="form-group">
+                                <select class="form-control" id="periodSelect">
+                                  <option value="week">Week</option>
+                                  <option value="month">Month</option>
+                                </select>
+                              </div>
+                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <ul class="list-group">
-                            <li class="list-group-item">
-                                1 Walter Wynne 105m 
-                            </li>
-                            <li class="list-group-item">
-                                1 Walter Wynne 105m 
-                            </li>
-                          </ul>
+                    <div class="row">
+                        <div class="col-12">
+                            <ul class="list-group leaderboard-list">
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
