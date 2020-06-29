@@ -8,6 +8,7 @@ import sass from 'gulp-sass';
 import autoprefixer from 'gulp-autoprefixer';
 import babel from 'gulp-babel';
 import uglify from 'gulp-uglify';
+import { dir } from 'console';
 
 const PRODUCTION = yargs.argv.prod;
 
@@ -23,6 +24,10 @@ const dirs = {
 const jsPaths = {
     dev: `${dirs.dev}/js/**/*.js`,
     prod: `${dirs.prod}/assets/js`
+}
+
+const imgPaths = {
+    prod: `${dirs.prod}/assets/img`
 }
 
 // Paths to del
@@ -45,12 +50,14 @@ export const clear = (done) => {
 const dependences = [
     './index.html',
     './node_modules/jquery/dist/jquery.min.js',
-    './js/app.js'
+    './js/app.js',
+    './img/*.*'
 ];
 
 // Copy dependences
 export const projectDependences = () => {
     return src(dependences)
+        .pipe(gulpIf('+(*.svg|*.jpg|*.png)', dest(imgPaths.prod)))
         .pipe(gulpIf('*.html', dest(dirs.prod)))
         .pipe(gulpIf('*.js', dest(jsPaths.prod)));
 }
