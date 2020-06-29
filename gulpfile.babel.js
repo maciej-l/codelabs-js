@@ -25,10 +25,6 @@ const jsPaths = {
     prod: `${dirs.prod}/assets/js`
 }
 
-/**
- * Clear production gulp task
- */
-
 // Paths to del
 const toDel = {
     del: `${dirs.prod}/**`,
